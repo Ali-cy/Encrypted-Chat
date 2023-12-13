@@ -16,7 +16,7 @@ choice = input('Do you want to host (1) or to connect (2): ')
 # If the user chooses to host
 if choice == '1': 
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server.bind(('192.168.0.56', 9999))  # Bind the server to a specific IP address and port
+    server.bind(('', 9999))  # Bind the server to a specific IP address and port, IP address is added to ''
     server.listen()
 
     client, _ = server.accept()  # Accept incoming connections
@@ -25,7 +25,7 @@ if choice == '1':
 # If the user chooses to connect
 elif choice == '2':
     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    client.connect(('192.168.0.56', 9999))  # Connect to the server
+    client.connect(('', 9999))  # Connect to the server, IP address is added to ''
     publicPartner = rsa.PublicKey.load_pkcs1(client.recv(1024))  # Receive public key from the server
     client.send(publicKey.save_pkcs1("PEM"))  # Send own public key to the server
 else:
