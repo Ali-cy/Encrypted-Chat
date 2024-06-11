@@ -30,7 +30,7 @@ This script establishes a secure communication channel between a host and a clie
 
 ## Notes:
 
-- The script is designed for educational purposes and may require network configuration adjustments for proper operation.
+- The script is designed for practice purposes and may require network configuration adjustments for proper operation.
 - The project utilizes Python's `socket`, `threading`, and `rsa` libraries.
 - RSA encryption/decryption logic adapted from the `rsa` library.
 
