@@ -21,7 +21,6 @@ This script establishes a secure communication channel between a host and a clie
 2. **Communication:**
    - Upon successful connection, the encrypted chat session begins.
    - Messages are encrypted using RSA encryption before transmission.
-   - Enjoy secure communication with your partner!
 
 ## Usage:
 
